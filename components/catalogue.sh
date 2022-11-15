@@ -27,5 +27,8 @@ ECHO "Extract Application Archive"
 cd /home/roboshop && rm -rf catlogue &>>${LOG_FILE} && unzip /tmp/catalogue.zip &>>${LOG_FILE} && mv catalogue-main catalogue
 statusCheck $?
 
+ECHO "Install NodeJS Modules"
+cd /home/roboshop/catalogue && rm -rf catalogue &>>{LOG_FILE} && chown roboshop:roboshop /home/roboshop/catalogue -R
+statusCheck $?
 
 
