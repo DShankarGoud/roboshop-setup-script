@@ -24,11 +24,11 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/cat
 statusCheck $?
 
 ECHO "Extract Application Archive"
-cd /home/roboshop && unzip /tmp/catalogue.zip &>>${LOG_FILE} && mv catalogue-main catalogue
+cd /home/roboshop &&  rm -rf catalogue &>>{LOG_FILE} && unzip /tmp/catalogue.zip &>>${LOG_FILE} && mv catalogue-main catalogue
 statusCheck $?
 
 ECHO "Install NodeJS Modules"
-cd /home/roboshop/catalogue && rm -rf catalogue &>>{LOG_FILE} && chown roboshop:roboshop /home/roboshop/catalogue -R
+cd /home/roboshop/catalogue && npm install &>>${LOG_FILE} && chown roboshop:roboshop /home/roboshop/catalogue -R
 statusCheck $?
 
 
