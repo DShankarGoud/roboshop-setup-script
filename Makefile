@@ -1,5 +1,5 @@
 cart:
-	@bash components/cart.bash
+	@bash components/cart.sh
 
 catalogue:
 	@bash components/catalogue.sh
