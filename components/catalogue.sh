@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ECHO "Configure NodeJS Yum Repos"
-curl -sL https://rpm.nodesource.com/setup_16.x | bash &>>${LOG_FILE}
+curl -sL https://rpm.nodesource.com/setup_1ts.x | bash &>>${LOG_FILE}
 statusCheck $?
 
 ECHO "Install NodeJS"
