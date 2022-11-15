@@ -16,4 +16,7 @@ if [ $? -ne 0 ]; then
   statusCheck $?
 fi
 
+ECHO "Download Application Content"
+curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>${LOG_FILE}
+statusCheck $?
 
